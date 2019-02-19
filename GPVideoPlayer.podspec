@@ -17,7 +17,7 @@ A video player with custom playback controls
   s.homepage         = 'https://github.com/pgpt10/GPVideoPlayer'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.platform     	= :ios, "10.0"
-  s.author           = { 'Payal Gupta' => 'p.gpt10@gmail.com' }
+  s.author           = { 'pgpt10' => 'p.gpt10@gmail.com' }
   s.source           = { :git => 'https://github.com/pgpt10/GPVideoPlayer.git', :tag => s.version.to_s }
   s.ios.deployment_target = '10.0'
   s.source_files = 'GPVideoPlayer/Classes/**/*'
