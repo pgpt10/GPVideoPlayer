@@ -4,6 +4,9 @@
 [![Version](https://img.shields.io/cocoapods/v/GPVideoPlayer.svg?style=flat)](https://cocoapods.org/pods/GPVideoPlayer)
 [![License](https://img.shields.io/cocoapods/l/GPVideoPlayer.svg?style=flat)](https://cocoapods.org/pods/GPVideoPlayer)
 [![Platform](https://img.shields.io/cocoapods/p/GPVideoPlayer.svg?style=flat)](https://cocoapods.org/pods/GPVideoPlayer)
+[![Total Downloads](https://img.shields.io/cocoapods/dt/SideMenu.svg?style=social)](http://cocoapods.org/pods/SideMenu)
+[![Monthly Downloads](https://img.shields.io/cocoapods/dm/SideMenu.svg?style=social)](http://cocoapods.org/pods/SideMenu)
+[![Weekly Downloads](https://img.shields.io/cocoapods/dw/SideMenu.svg?style=social)](http://cocoapods.org/pods/SideMenu)
 
 ## Example
 
