@@ -2,7 +2,7 @@
 
 [![CI Status](https://img.shields.io/travis/pgpt10/GPVideoPlayer.svg?style=flat)](https://travis-ci.org/pgpt10/GPVideoPlayer)
 [![Version](https://img.shields.io/cocoapods/v/GPVideoPlayer.svg?style=flat)](https://cocoapods.org/pods/GPVideoPlayer)
-[![License](https://img.shields.io/cocoapods/l/GPVideoPlayer.svg?style=flat)](https://cocoapods.org/pods/GPVideoPlayer)
+[![License](https://img.shields.io/cocoapods/l/GPVideoPlayer.svg?style=flat)](https://github.com/pgpt10/GPVideoPlayer/blob/master/LICENSE)
 [![Platform](https://img.shields.io/cocoapods/p/GPVideoPlayer.svg?style=flat)](https://cocoapods.org/pods/GPVideoPlayer)
 
 ## Example
@@ -10,6 +10,9 @@
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Requirements
+
+- Xcode 10
+- iOS 10.0 or later
 
 ## Installation
 
@@ -19,10 +22,6 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod 'GPVideoPlayer'
 ```
-
-## Author
-
-pgpt10, payal2.gupta@paytm.com
 
 ## License
 
