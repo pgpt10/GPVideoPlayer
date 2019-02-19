@@ -198,7 +198,7 @@ private extension GPVideoPlayer {
         let playerLayer = AVPlayerLayer(player: player)
         playerLayer.frame = self.videoView.bounds
         playerLayer.videoGravity = .resizeAspect
-        playerLayer.contentsGravity = kCAGravityResizeAspect
+        playerLayer.contentsGravity = .resizeAspect
         self.playerLayer = playerLayer
         return playerLayer
     }
@@ -215,7 +215,7 @@ private extension GPVideoPlayer {
         DispatchQueue.main.async {[weak self] in
             if let playerItem = notification.object as? AVPlayerItem {
                 self?.player?.remove(playerItem)
-                playerItem.seek(to: kCMTimeZero, completionHandler: nil)
+                playerItem.seek(to: .zero, completionHandler: nil)
                 self?.player?.insert(playerItem, after: nil)
                 if playerItem == self?.playerItems?.last {
                     self?.pauseVideo()
