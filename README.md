@@ -9,9 +9,40 @@ It is simple and easy to use video player with playback controls written in Swif
 
 - [x] Live video streaming from the given URL.
 - [x] Playing a video available in the app bundle.
-- [x] Optimized for playing multiple videos in a queue opne after the other.
+- [x] Optimized for playing multiple videos in a queue one after the other.
 - [x] Playback video controls - volume, rewind, forward etc.
 - [x] Integrated with full screen video mode.
+
+## Requirements
+
+- [x] Xcode 10.
+- [x] Swift 4.2.
+- [x] iOS 10 or higher.
+
+## Installation
+
+[CocoaPods](http://cocoapods.org) is a dependency manager for Cocoa projects. You can install it with the following command:
+
+```bash
+$ gem install cocoapods
+```
+
+To integrate GPVideoPlayer into your Xcode project using CocoaPods, specify it in your `Podfile`:
+
+```ruby
+target 'sampleproj' do
+
+  use_frameworks!
+  pod 'GPVideoPlayer'
+  
+end
+```
+
+Then, run the following command:
+
+```bash
+$ pod install
+```
 
 ## Usage
 
@@ -56,37 +87,6 @@ To run the example project,
 1. Clone the repo.
 2. Open `GPVideoPlayer -> Example -> GPVideoPlayer.xcworkspace`
 3. Run the project (cmd + R)
-
-## Requirements
-
-- [x] Xcode 10.
-- [x] Swift 4.2.
-- [x] iOS 10 or higher.
-
-## Installation
-
-[CocoaPods](http://cocoapods.org) is a dependency manager for Cocoa projects. You can install it with the following command:
-
-```bash
-$ gem install cocoapods
-```
-
-To integrate GPVideoPlayer into your Xcode project using CocoaPods, specify it in your `Podfile`:
-
-```ruby
-target 'sampleproj' do
-
-  use_frameworks!
-  pod 'GPVideoPlayer'
-  
-end
-```
-
-Then, run the following command:
-
-```bash
-$ pod install
-```
 
 ## License
 
