@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'GPVideoPlayer_Example' do
+  pod 'GPVideoPlayer', :path => '../'
+
+  target 'GPVideoPlayer_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
