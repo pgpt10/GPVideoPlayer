@@ -1,0 +1,6 @@
+framework module GPVideoPlayer {
+  umbrella header "GPVideoPlayer-umbrella.h"
+
+  export *
+  module * { export * }
+}

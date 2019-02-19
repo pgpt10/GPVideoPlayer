@@ -1,0 +1,16 @@
+PODS:
+  - GPVideoPlayer (0.1.0)
+
+DEPENDENCIES:
+  - GPVideoPlayer (from `../`)
+
+EXTERNAL SOURCES:
+  GPVideoPlayer:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  GPVideoPlayer: 2f93a9686505d50460666df5021b35bef125d425
+
+PODFILE CHECKSUM: 94cfc4a7fc6fad848256cea2a0897d635879cfcc
+
+COCOAPODS: 1.5.3

@@ -1,0 +1,22 @@
+{
+  "name": "GPVideoPlayer",
+  "version": "0.1.0",
+  "summary": "A short description of GPVideoPlayer.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/pgpt10/GPVideoPlayer",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "pgpt10": "payal2.gupta@paytm.com"
+  },
+  "source": {
+    "git": "https://github.com/pgpt10/GPVideoPlayer.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "GPVideoPlayer/Classes/**/*"
+}
