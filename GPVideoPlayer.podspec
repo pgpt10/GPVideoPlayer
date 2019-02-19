@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GPVideoPlayer'
-  s.version          = '1.0.1'
+  s.version          = '1.0.3'
   s.summary      = "A video player with custom playback controls"
   s.description      = <<-DESC
 A video player with custom playback controls
@@ -21,10 +21,7 @@ A video player with custom playback controls
   s.source           = { :git => 'https://github.com/pgpt10/GPVideoPlayer.git', :tag => s.version.to_s }
   s.ios.deployment_target = '10.0'
   s.source_files = 'GPVideoPlayer/Classes/**/*'
-  
-  s.resource_bundles = {
-    'GPVideoPlayer' => ['GPVideoPlayer/Assets/*.xcassets']
-  }
+  s.resources 	     = 'GPVideoPlayer/Assets/*.xcassets'
   s.swift_version = "4.2" 
 
 end
