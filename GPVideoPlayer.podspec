@@ -25,5 +25,6 @@ A video player with custom playback controls
   s.resource_bundles = {
     'GPVideoPlayer' => ['GPVideoPlayer/Assets/*.xcassets']
   }
+  s.swift_version = "4.2" 
 
 end
