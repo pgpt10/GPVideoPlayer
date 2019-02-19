@@ -22,7 +22,7 @@ pod 'GPVideoPlayer'
 
 ## Author
 
-pgpt10, payal2.gupta@paytm.com
+pgpt10, p.gpt10@gmail.com
 
 ## License
 
