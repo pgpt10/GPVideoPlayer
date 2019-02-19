@@ -23,7 +23,7 @@ A video player with custom playback controls
   s.source_files = 'GPVideoPlayer/Classes/**/*'
   
   s.resource_bundles = {
-    'GPVideoPlayer' => ['GPVideoPlayer/Assets/*.png']
+    'GPVideoPlayer' => ['GPVideoPlayer/Assets/*.xcassets']
   }
 
 end
