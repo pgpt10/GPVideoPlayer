@@ -23,5 +23,6 @@ A video player with custom playback controls
   s.source_files = 'GPVideoPlayer/Classes/**/*'
   s.resources 	     = 'GPVideoPlayer/Assets/*.xcassets'
   s.swift_version = "4.2" 
+  echo 4.2 > .swift-version
 
 end
