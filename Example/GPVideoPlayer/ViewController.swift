@@ -16,6 +16,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         if let player = GPVideoPlayer.initialize(with: self.mediaView.bounds) {
+            player.isToShowPlaybackControls = true
+            
             self.mediaView.addSubview(player)
             
             let url1 = URL(string: "https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4")!

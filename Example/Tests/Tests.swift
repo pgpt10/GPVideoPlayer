@@ -3,15 +3,28 @@ import GPVideoPlayer
 
 class Tests: XCTestCase {
     
+    var player: GPVideoPlayer?
+    
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        self.player = GPVideoPlayer.initialize(with: CGRect(origin: .zero, size: CGSize(width: UIScreen.main.bounds.width, height: 300.0)))
+        self.player?.loadVideo(with: URL(string: "https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4")!)
+        self.player?.isToShowPlaybackControls = true
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        self.player = nil
         super.tearDown()
     }
+    
+    func testPause() {
+        self.player?.pauseVideo()
+    }
+    
+    func testPlay()  {
+        self.player?.playVideo()
+    }
+    
     
     func testExample() {
         // This is an example of a functional test case.
