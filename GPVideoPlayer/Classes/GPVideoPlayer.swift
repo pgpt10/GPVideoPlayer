@@ -11,6 +11,7 @@ import AVFoundation
 import AVKit
 
 public class GPVideoPlayer: UIView {
+    
     //MARK: Outlets
     @IBOutlet weak var progressBar: UIProgressView!
     @IBOutlet weak var videoView: UIView!
@@ -26,6 +27,7 @@ public class GPVideoPlayer: UIView {
             self.volumeButton.isSelected = self.isMuted
         }
     }
+    
     public var isToShowPlaybackControls = true {
         didSet {
             if !isToShowPlaybackControls {
@@ -45,6 +47,7 @@ public class GPVideoPlayer: UIView {
     }
     
     //MARK: Lifecycle Methods
+    
     override public func layoutSubviews() {
         super.layoutSubviews()
         self.playerLayer?.frame = self.videoView.bounds
@@ -71,6 +74,7 @@ public class GPVideoPlayer: UIView {
     }
     
     //MARK: Public Methods
+    
     public class func initialize(with frame: CGRect) -> GPVideoPlayer? {
         let bundle = Bundle(for: GPVideoPlayer.self)
         let view = bundle.loadNibNamed(Constants.nibName, owner: self, options: nil)?.first as? GPVideoPlayer
@@ -156,6 +160,7 @@ public class GPVideoPlayer: UIView {
 }
 
 // MARK: - Private Methods
+
 private extension GPVideoPlayer {
     func player(with urls: [URL]) -> AVQueuePlayer? {
         var playerItems = [AVPlayerItem]()
@@ -232,4 +237,5 @@ extension AVPlayerViewController {
         NotificationCenter.default.post(name: Notification.Name("avPlayerDidDismiss"), object: nil, userInfo: nil)
     }
 }
+
 
