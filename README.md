@@ -15,8 +15,8 @@ It is simple and easy to use video player with playback controls written in Swif
 
 ## Requirements
 
-- [x] Xcode 10.
-- [x] Swift 4.2.
+- [x] Xcode 11.1.
+- [x] Swift 5.0.
 - [x] iOS 10 or higher.
 
 ## Installation
