@@ -37,9 +37,11 @@ public class GPVideoPlayer: UIView {
         }
     }
     
+    public var player: AVQueuePlayer?
+    
     //MARK: Private Properties
+    
     private var playerLayer: AVPlayerLayer?
-    private var player: AVQueuePlayer?
     private var playerItems: [AVPlayerItem]?
     private enum Constants {
         static let nibName = "GPVideoPlayer"
