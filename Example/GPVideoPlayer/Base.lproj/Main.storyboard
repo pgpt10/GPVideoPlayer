@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,16 +20,29 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vTe-w6-DGJ">
-                                <rect key="frame" x="0.0" y="20" width="375" height="300"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="Dn6-ta-UfS"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WEr-hD-XpC">
+                                <rect key="frame" x="162.5" y="322" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="WEr-hD-XpC" secondAttribute="height" multiplier="1:1" id="Sio-8T-d0t"/>
+                                    <constraint firstAttribute="height" constant="50" id="che-Zm-9pE"/>
+                                </constraints>
+                                <state key="normal" image="playpause.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="mediaPlayButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="cpw-4P-0Ww"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="vTe-w6-DGJ" secondAttribute="trailing" id="MLT-Pc-P6K"/>
+                            <constraint firstItem="WEr-hD-XpC" firstAttribute="top" secondItem="vTe-w6-DGJ" secondAttribute="bottom" constant="22" id="epg-0V-ZIt"/>
+                            <constraint firstItem="WEr-hD-XpC" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="fSW-62-tYX"/>
                             <constraint firstItem="vTe-w6-DGJ" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="of8-l1-dyx"/>
                             <constraint firstItem="vTe-w6-DGJ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="tT4-P0-3Wh"/>
                         </constraints>
@@ -42,6 +53,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="138" y="124"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="playpause.fill" catalog="system" width="64" height="36"/>
+    </resources>
 </document>
