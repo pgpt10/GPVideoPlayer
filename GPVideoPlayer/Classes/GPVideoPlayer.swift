@@ -221,15 +221,22 @@ private extension GPVideoPlayer {
     @objc func playerEndedPlaying(_ notification: Notification) {
         DispatchQueue.main.async {[weak self] in
             if let playerItem = notification.object as? AVPlayerItem {
-                self?.player?.remove(playerItem)
-                playerItem.seek(to: .zero, completionHandler: nil)
-                self?.player?.insert(playerItem, after: nil)
-                if playerItem == self?.playerItems?.last {
-                    self?.pauseVideo()
-                }
+                //playerItem.seek(to: .zero, completionHandler: )
+                playerItem.seek(to: .zero, completionHandler: { complete in
+                           print(complete)
+                           self?.player?.insert(playerItem, after: nil)
+                           if playerItem == self?.playerItems?.last {
+                              self?.pauseVideo()
+                           }
+                })
+                //                self?.player?.insert(playerItem, after: nil)
+                //                if playerItem == self?.playerItems?.last {
+                //                    self?.pauseVideo()
+                //                }
             }
         }
     }
+    
 }
 
 extension AVPlayerViewController {
