@@ -11,6 +11,7 @@ import AVFoundation
 import AVKit
 
 public class GPVideoPlayer: UIView {
+    
     //MARK: Outlets
     @IBOutlet weak var progressBar: UIProgressView!
     @IBOutlet weak var videoView: UIView!
@@ -26,6 +27,7 @@ public class GPVideoPlayer: UIView {
             self.volumeButton.isSelected = self.isMuted
         }
     }
+    
     public var isToShowPlaybackControls = true {
         didSet {
             if !isToShowPlaybackControls {
@@ -35,9 +37,11 @@ public class GPVideoPlayer: UIView {
         }
     }
     
+    public var player: AVQueuePlayer?
+    
     //MARK: Private Properties
+    
     private var playerLayer: AVPlayerLayer?
-    private var player: AVQueuePlayer?
     private var playerItems: [AVPlayerItem]?
     private enum Constants {
         static let nibName = "GPVideoPlayer"
@@ -45,6 +49,7 @@ public class GPVideoPlayer: UIView {
     }
     
     //MARK: Lifecycle Methods
+    
     override public func layoutSubviews() {
         super.layoutSubviews()
         self.playerLayer?.frame = self.videoView.bounds
@@ -71,6 +76,7 @@ public class GPVideoPlayer: UIView {
     }
     
     //MARK: Public Methods
+    
     public class func initialize(with frame: CGRect) -> GPVideoPlayer? {
         let bundle = Bundle(for: GPVideoPlayer.self)
         let view = bundle.loadNibNamed(Constants.nibName, owner: self, options: nil)?.first as? GPVideoPlayer
@@ -156,6 +162,7 @@ public class GPVideoPlayer: UIView {
 }
 
 // MARK: - Private Methods
+
 private extension GPVideoPlayer {
     func player(with urls: [URL]) -> AVQueuePlayer? {
         var playerItems = [AVPlayerItem]()
@@ -214,15 +221,22 @@ private extension GPVideoPlayer {
     @objc func playerEndedPlaying(_ notification: Notification) {
         DispatchQueue.main.async {[weak self] in
             if let playerItem = notification.object as? AVPlayerItem {
-                self?.player?.remove(playerItem)
-                playerItem.seek(to: .zero, completionHandler: nil)
-                self?.player?.insert(playerItem, after: nil)
-                if playerItem == self?.playerItems?.last {
-                    self?.pauseVideo()
-                }
+                //playerItem.seek(to: .zero, completionHandler: )
+                playerItem.seek(to: .zero, completionHandler: { complete in
+                           print(complete)
+                           self?.player?.insert(playerItem, after: nil)
+                           if playerItem == self?.playerItems?.last {
+                              self?.pauseVideo()
+                           }
+                })
+                //                self?.player?.insert(playerItem, after: nil)
+                //                if playerItem == self?.playerItems?.last {
+                //                    self?.pauseVideo()
+                //                }
             }
         }
     }
+    
 }
 
 extension AVPlayerViewController {
@@ -232,4 +246,5 @@ extension AVPlayerViewController {
         NotificationCenter.default.post(name: Notification.Name("avPlayerDidDismiss"), object: nil, userInfo: nil)
     }
 }
+
 
