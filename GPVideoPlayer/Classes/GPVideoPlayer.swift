@@ -36,6 +36,7 @@ public class GPVideoPlayer: UIView {
     }
     
     //MARK: Private Properties
+    private var timeObserver: Any?
     private var playerLayer: AVPlayerLayer?
     private var player: AVQueuePlayer?
     private var playerItems: [AVPlayerItem]?
@@ -51,6 +52,10 @@ public class GPVideoPlayer: UIView {
     }
     
     deinit {
+        if let timeObserver = timeObserver {
+            player?.removeTimeObserver(timeObserver)
+        }
+        player?.removeObserver(self, forKeyPath: "timeControlStatus")
         NotificationCenter.default.removeObserver(self)
     }
     
@@ -172,7 +177,7 @@ private extension GPVideoPlayer {
         
         let player = AVQueuePlayer(items: playerItems)
         self.playerItems = playerItems
-        player.addPeriodicTimeObserver(forInterval: CMTime(seconds: 1, preferredTimescale: 2), queue: DispatchQueue.main) {[weak self] (progressTime) in
+        timeObserver = player.addPeriodicTimeObserver(forInterval: CMTime(seconds: 1, preferredTimescale: 2), queue: DispatchQueue.main) {[weak self] (progressTime) in
             if let duration = player.currentItem?.duration {
                 
                 let durationSeconds = CMTimeGetSeconds(duration)
